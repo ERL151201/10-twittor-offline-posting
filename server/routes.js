@@ -5,12 +5,21 @@ var router = express.Router();
 
 const mensajes = [{
 
-    _id: 'XXX',
-    user: 'spiderman',
-    mensaje: 'Hola mundo'
+        _id: 'XXX',
+        user: 'spiderman',
+        mensaje: 'Hola mundo'
 
 
-}, ];
+    },
+    {
+
+        _id: 'XXX',
+        user: 'ironman',
+        mensaje: 'Hola mundo'
+
+
+    },
+];
 
 
 

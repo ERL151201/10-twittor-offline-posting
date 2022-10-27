@@ -11,14 +11,7 @@ const mensajes = [{
 
 
     },
-    {
 
-        _id: 'XXX',
-        user: 'ironman',
-        mensaje: 'Hola mundo'
-
-
-    },
 ];
 
 

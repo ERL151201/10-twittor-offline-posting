@@ -121,3 +121,14 @@ self.addEventListener('fetch', e => {
     e.respondWith(respuesta);
 
 });
+
+// tareas asincronas
+self.addEventListener('sync', e => {
+
+    console.log('SW: Sync');
+
+    if (e.tag === 'nuevo-post') {
+        // postear a BD cuando hay conexion
+        // e.waitUntil( );
+    }
+});

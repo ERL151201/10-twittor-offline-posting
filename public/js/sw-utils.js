@@ -35,29 +35,27 @@ function actualizaCacheStatico(staticCache, req, APP_SHELL_INMUTABLE) {
     }
 
 
-
 }
 
-//Network witch cache  fallback /   update
+
+// Network with cache fallback / update
 function manejoApiMensajes(cacheName, req) {
 
 
     if (req.clone().method === 'POST') {
-        // POSTEO de un nuevo mensaje   
+        // POSTEO de un nuevo mensaje
 
         if (self.registration.sync) {
-
             return req.clone().text().then(body => {
-                // console.log(body);
 
+                // console.log(body);
                 const bodyObj = JSON.parse(body);
                 return guardarMensaje(bodyObj);
+
             });
         } else {
             return fetch(req);
         }
-
-
 
 
     } else {
@@ -74,6 +72,8 @@ function manejoApiMensajes(cacheName, req) {
         }).catch(err => {
             return caches.match(req);
         });
+
     }
+
 
 }
